@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TOM WEB DESIGN｜ホームページ制作</title>
+
+  <meta
+    name="description"
+    content="小さなお店や事業のためのホームページ制作。テンプレートをベースに、あなたのビジネスに合わせたWebサイトを制作します。"
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        "Noto Sans JP",
+        sans-serif;
+      background: #f4f3ef;
+      color: #151515;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 22px 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      mix-blend-mode: difference;
+      color: white;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      padding: 120px 5vw 70px;
+      position: relative;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-inner {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-small {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      margin-bottom: 28px;
+    }
+
+    .hero-title {
+      font-size: clamp(64px, 13vw, 190px);
+      line-height: 0.82;
+      letter-spacing: -0.06em;
+      font-weight: 700;
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-title span {
+      display: block;
+    }
+
+    .hero-title .outline {
+      color: transparent;
+      -webkit-text-stroke: 1px #151515;
+    }
+
+    .hero-copy {
+      max-width: 420px;
+      margin-top: 45px;
+      margin-left: 5px;
+      font-size: 15px;
+    }
+
+    .hero-image {
+      position: absolute;
+      width: min(42vw, 560px);
+      height: min(55vw, 650px);
+      right: 7vw;
+      top: 17vh;
+
+      overflow: hidden;
+      border-radius: 42% 42% 8% 8%;
+      z-index: 1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay-text {
+      position: absolute;
+      right: 3vw;
+      bottom: 4vh;
+
+      font-size: clamp(50px, 9vw, 130px);
+      line-height: 0.8;
+      color: rgba(255,255,255,0.35);
+
+      font-weight: 700;
+      letter-spacing: -0.06em;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .scroll {
+      position: absolute;
+      bottom: 35px;
+      left: 5vw;
+
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      writing-mode: vertical-rl;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 160px 8vw;
+      background: #151515;
+      color: white;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      margin-bottom: 40px;
+      opacity: 0.6;
+    }
+
+    .intro-title {
+      max-width: 1000px;
+      font-size: clamp(38px, 6vw, 82px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .intro-text {
+      max-width: 560px;
+      margin-top: 50px;
+      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+    }
+
+    /* =========================
+       TEMPLATE
+    ========================= */
+
+    .templates {
+      padding: 150px 5vw;
+    }
+
+    .templates-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 70px;
+    }
+
+    .templates-heading h2 {
+      font-size: clamp(50px, 8vw, 110px);
+      line-height: 0.85;
+      letter-spacing: -0.06em;
+    }
+
+    .templates-heading p {
+      max-width: 280px;
+      font-size: 13px;
+    }
+
+    .template-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 70px 30px;
+    }
+
+    .template-card {
+      display: block;
+    }
+
+    .template-image {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #ddd;
+    }
+
+    .template-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .template-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .template-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-top: 20px;
+    }
+
+    .template-name {
+      font-size: 24px;
+      letter-spacing: -0.03em;
+    }
+
+    .template-category {
+      margin-top: 5px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      opacity: 0.5;
+    }
+
+    .template-number {
+      font-size: 11px;
+      opacity: 0.5;
+    }
+
+    /* =========================
+       COLOR
+    ========================= */
+
+    .color-section {
+      padding: 150px 5vw;
+      background: #dce3dc;
+      overflow: hidden;
+    }
+
+    .color-title {
+      font-size: clamp(70px, 14vw, 190px);
+      line-height: 0.8;
+      letter-spacing: -0.08em;
+    }
+
+    .color-text {
+      max-width: 450px;
+      margin-top: 50px;
+      font-size: 15px;
+    }
+
+    .color-circle {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: #243c38;
+      margin: 80px auto 0;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 180px 5vw;
+      background: #151515;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(45px, 8vw, 110px);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+    }
+
+    .cta p {
+      margin: 40px auto;
+      max-width: 450px;
+      color: rgba(255,255,255,0.65);
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 18px 38px;
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: 100px;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: white;
+      color: #151515;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 30px 5vw;
+      background: #151515;
+      color: rgba(255,255,255,0.45);
+      border-top: 1px solid rgba(255,255,255,0.15);
+
+      display: flex;
+      justify-content: space-between;
+
+      font-size: 11px;
+      letter-spacing: 0.1em;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      header {
+        padding: 18px 5vw;
+      }
+
+      nav {
+        gap: 14px;
+        font-size: 9px;
+      }
+
+      .hero {
+        min-height: 100svh;
+        padding-top: 120px;
+      }
+
+      .hero-title {
+        font-size: clamp(60px, 20vw, 120px);
+      }
+
+      .hero-image {
+        width: 62vw;
+        height: 65vw;
+        right: 4vw;
+        top: 32vh;
+      }
+
+      .hero-copy {
+        position: relative;
+        z-index: 5;
+        max-width: 260px;
+        margin-top: 40px;
+        font-size: 13px;
+      }
+
+      .hero-overlay-text {
+        font-size: 65px;
+        right: 2vw;
+      }
+
+      .template-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .templates-heading {
+        display: block;
+      }
+
+      .templates-heading p {
+        margin-top: 35px;
+      }
+
+      .template-image {
+        border-radius: 22px;
+      }
+
+      .color-circle {
+        width: 200px;
+        height: 200px;
+      }
+
+      footer {
+        display: block;
+      }
+
+      footer div + div {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <a href="#" class="logo">TOM.</a>
+
+    <nav>
+      <a href="#templates">TEMPLATE</a>
+      <a href="#service">SERVICE</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div class="hero-small">
+        WEB DESIGN / OSAKA / JAPAN
+      </div>
+
+      <h1 class="hero-title">
+        <span>YOUR</span>
+        <span class="outline">WEB</span>
+        <span>SITE.</span>
+      </h1>
+
+      <p class="hero-copy">
+        小さなお店や事業のためのホームページ制作。<br>
+        テンプレートをベースに、あなたのビジネスに合わせて仕上げます。
+      </p>
+
+    </div>
+
+
+    <!-- HERO IMAGE -->
+
+    <div class="hero-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+        alt="Web design"
+      >
+
+    </div>
+
+
+    <div class="hero-overlay-text">
+      DESIGN
+    </div>
+
+    <div class="scroll">
+      SCROLL
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="intro" id="service">
+
+    <div class="section-label">
+      01 / ABOUT
+    </div>
+
+    <h2 class="intro-title">
+      A GOOD WEBSITE<br>
+      SHOULD FEEL<br>
+      LIKE YOUR BUSINESS.
+    </h2>
+
+    <p class="intro-text">
+      ホームページは、ただ情報を載せるだけのものではありません。
+      お店やサービスの雰囲気、想い、魅力が伝わる「もうひとつの入口」。
+      デザインと使いやすさの両方を大切にして制作します。
+    </p>
+
+  </section>
+
+
+  <!-- TEMPLATE -->
+
+  <section class="templates" id="templates">
+
+    <div class="templates-heading">
+
+      <h2>
+        TEMPLATE
+      </h2>
+
+      <p>
+        ベースとなるデザインを選んで、
+        あなたのビジネスに合わせてカスタマイズします。
+      </p>
+
+    </div>
+
+
+    <div class="template-grid">
+
+
+      <!-- TEMPLATE 01 -->
+
+      <a
+        href="https://taka-tom.github.io/team-homepage/index.html"
+        target="_blank"
+        class="template-card"
+      >
+
+        <div class="template-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80"
+            alt="Sports website"
+          >
+
+        </div>
+
+        <div class="template-info">
+
+          <div>
+            <div class="template-name">
+              SPORTS
+            </div>
+
+            <div class="template-category">
+              TEAM / CLUB / SCHOOL
+            </div>
+          </div>
+
+          <div class="template-number">
+            01
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- TEMPLATE 02 -->
+
+      <a
+        href="https://taka-tom.github.io/haru-chiryo/"
+        target="_blank"
+        class="template-card"
+      >
+
+        <div class="template-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80"
+            alt="Clinic website"
+          >
+
+        </div>
+
+        <div class="template-info">
+
+          <div>
+            <div class="template-name">
+              CLINIC
+            </div>
+
+            <div class="template-category">
+              CLINIC / SALON / WELLNESS
+            </div>
+          </div>
+
+          <div class="template-number">
+            02
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- TEMPLATE 03 -->
+
+      <a
+        href="https://taka-tom.github.io/restaurant-template/index.html"
+        target="_blank"
+        class="template-card"
+      >
+
+        <div class="template-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+            alt="Restaurant website"
+          >
+
+        </div>
+
+        <div class="template-info">
+
+          <div>
+            <div class="template-name">
+              RESTAURANT
+            </div>
+
+            <div class="template-category">
+              RESTAURANT / CAFE / BAR
+            </div>
+          </div>
+
+          <div class="template-number">
+            03
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- TEMPLATE 04 -->
+
+      <a
+        href="https://taka-tom.github.io/c.c/index.html"
+        target="_blank"
+        class="template-card"
+      >
+
+        <div class="template-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
+            alt="School website"
+          >
+
+        </div>
+
+        <div class="template-info">
+
+          <div>
+            <div class="template-name">
+              SCHOOL
+            </div>
+
+            <div class="template-category">
+              SCHOOL / CLASS / COMMUNITY
+            </div>
+          </div>
+
+          <div class="template-number">
+            04
+          </div>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- COLOR -->
+
+  <section class="color-section">
+
+    <div class="section-label">
+      02 / COLOR
+    </div>
+
+    <h2 class="color-title">
+      YOUR<br>
+      COLOR.
+    </h2>
+
+    <p class="color-text">
+      デザインだけでなく、カラーも自由に。
+      ブランドやお店の雰囲気に合わせて、
+      サイト全体の印象を調整します。
+    </p>
+
+    <div class="color-circle"></div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta" id="contact">
+
+    <h2>
+      LET'S<br>
+      BUILD<br>
+      YOUR SITE.
+    </h2>
+
+    <p>
+      ホームページを作りたいけど、
+      何から始めればいいかわからない。
+      そんな場合も、まずはお気軽にご相談ください。
+    </p>
+
+    <a href="mailto:your-email@example.com" class="cta-button">
+      CONTACT
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div>
+      © TOM WEB DESIGN
+    </div>
+
+    <div>
+      WEB DESIGN / OSAKA
+    </div>
+
+  </footer>
+
+</body>
+</html>
