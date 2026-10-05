@@ -397,13 +397,64 @@
       font-size: 15px;
     }
 
-    .color-circle {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background: #243c38;
-      margin: 80px auto 0;
-    }
+    .color-options {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+.color-option {
+  text-align: center;
+}
+
+.color-dot {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.color-dot.blue {
+  background: #1677ff;
+}
+
+.color-dot.green {
+  background: #243c38;
+}
+
+.color-dot.beige {
+  background: #d8c8ad;
+}
+
+.color-dot.black {
+  background: #151515;
+}
+
+.color-dot.orange {
+  background: #e87532;
+}
+
+.color-option span {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+
+  .color-options {
+    gap: 25px;
+    margin-top: 70px;
+  }
+
+  .color-dot {
+    width: 65px;
+    height: 65px;
+  }
+
+}
 
     /* =========================
        CTA
@@ -521,64 +572,7 @@
         border-radius: 22px;
       }
 
-      .color-options {
-  display: flex;
-  justify-content: center;
-  gap: 45px;
-  margin-top: 100px;
-  flex-wrap: wrap;
-}
-
-.color-option {
-  text-align: center;
-}
-
-.color-dot {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.color-dot.blue {
-  background: #1677ff;
-}
-
-.color-dot.green {
-  background: #243c38;
-}
-
-.color-dot.beige {
-  background: #d8c8ad;
-}
-
-.color-dot.black {
-  background: #151515;
-}
-
-.color-dot.orange {
-  background: #e87532;
-}
-
-.color-option span {
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  opacity: 0.6;
-}
-
-@media (max-width: 768px) {
-
-  .color-options {
-    gap: 25px;
-    margin-top: 70px;
-  }
-
-  .color-dot {
-    width: 65px;
-    height: 65px;
-  }
-
-}
+      
       footer {
         display: block;
       }
