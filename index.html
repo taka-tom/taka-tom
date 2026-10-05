@@ -296,6 +296,85 @@
       opacity: 0.5;
     }
 
+/* =========================
+   SERVICE
+========================= */
+
+.service-section {
+  padding: 150px 5vw;
+  background: #f4f3ef;
+}
+
+.service-title {
+  font-size: clamp(70px, 13vw, 180px);
+  line-height: 0.82;
+  letter-spacing: -0.08em;
+  margin-bottom: 100px;
+}
+
+.service-list {
+  max-width: 1000px;
+  margin-left: auto;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 30px;
+  padding: 35px 0;
+  border-top: 1px solid rgba(21,21,21,0.2);
+}
+
+.service-item:last-child {
+  border-bottom: 1px solid rgba(21,21,21,0.2);
+}
+
+.service-item > span {
+  font-size: 11px;
+  opacity: 0.5;
+  padding-top: 8px;
+}
+
+.service-item h3 {
+  font-size: 28px;
+  letter-spacing: -0.03em;
+}
+
+.service-item p {
+  max-width: 500px;
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+/* SERVICE MOBILE */
+
+@media (max-width: 768px) {
+
+  .service-section {
+    padding: 110px 5vw;
+  }
+
+  .service-title {
+    margin-bottom: 70px;
+  }
+
+  .service-item {
+    grid-template-columns: 35px 1fr;
+    gap: 15px;
+    padding: 28px 0;
+  }
+
+  .service-item h3 {
+    font-size: 22px;
+  }
+
+  .service-item p {
+    font-size: 13px;
+  }
+
+}
+
     /* =========================
        COLOR
     ========================= */
