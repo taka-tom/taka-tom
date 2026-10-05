@@ -456,6 +456,110 @@
 
 }
 
+/* =========================
+   PRICE
+========================= */
+
+.price-section {
+  padding: 150px 5vw;
+  background: #e8e6df;
+}
+
+.price-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.price-title {
+  font-size: clamp(70px, 13vw, 180px);
+  line-height: 0.82;
+  letter-spacing: -0.08em;
+}
+
+.price-box {
+  max-width: 520px;
+  padding: 50px;
+  background: #f4f3ef;
+  border-radius: 30px;
+}
+
+.price-label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  opacity: 0.5;
+}
+
+.price {
+  margin-top: 15px;
+  font-size: clamp(50px, 7vw, 90px);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.price > span:first-child {
+  font-size: 0.45em;
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+.price-from {
+  font-size: 0.35em;
+  letter-spacing: 0;
+}
+
+.price-box p {
+  margin-top: 35px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.price-box ul {
+  margin-top: 30px;
+  padding: 25px 0;
+  list-style: none;
+  border-top: 1px solid rgba(21,21,21,0.15);
+  border-bottom: 1px solid rgba(21,21,21,0.15);
+}
+
+.price-box li {
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+.price-box li::before {
+  content: "＋";
+  margin-right: 8px;
+  opacity: 0.5;
+}
+
+.price-note {
+  margin-top: 20px;
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+/* PRICE MOBILE */
+
+@media (max-width: 768px) {
+
+  .price-section {
+    padding: 110px 5vw;
+  }
+
+  .price-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .price-box {
+    padding: 30px;
+  }
+
+}
+
     /* =========================
        CTA
     ========================= */
