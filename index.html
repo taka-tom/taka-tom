@@ -788,6 +788,42 @@ a:hover {
   opacity: 0.55;
 }
     
+    /* =========================
+   MOBILE MENU
+========================= */
+
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .menu-button span {
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: #151515;
+  }
+
+  header nav {
+    display: none;
+  }
+
+}
+    
   </style>
 </head>
 
