@@ -1445,6 +1445,36 @@ body.theme-orange {
     nav.classList.toggle('menu-open');
     menuButton.classList.toggle('menu-active');
   });
+  
+  <script>
+  const colorOptions = document.querySelectorAll('.color-option');
+
+  colorOptions.forEach(option => {
+    option.addEventListener('click', () => {
+
+      if (option.querySelector('.blue')) {
+        document.body.className = 'theme-blue';
+      }
+
+      if (option.querySelector('.green')) {
+        document.body.className = 'theme-green';
+      }
+
+      if (option.querySelector('.beige')) {
+        document.body.className = 'theme-beige';
+      }
+
+      if (option.querySelector('.black')) {
+        document.body.className = 'theme-black';
+      }
+
+      if (option.querySelector('.orange')) {
+        document.body.className = 'theme-orange';
+      }
+
+    });
+  });
+</script>
 </script>
 
 </body>
