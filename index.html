@@ -909,6 +909,20 @@ body.theme-orange {
   --soft: #ead9cc;
 }
     
+    /* SELECTED COLOR */
+
+.color-option {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.color-option.active {
+  transform: scale(1.12);
+}
+
+.color-option.active .color-dot {
+  box-shadow: 0 0 0 5px var(--bg), 0 0 0 7px var(--accent);
+}
     
   </style>
 </head>
