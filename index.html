@@ -1464,12 +1464,17 @@ body.theme-orange {
     menuButton.classList.toggle('menu-active');
   });
   </script>
-  
   <script>
   const colorOptions = document.querySelectorAll('.color-option');
 
   colorOptions.forEach(option => {
     option.addEventListener('click', () => {
+
+      colorOptions.forEach(item => {
+        item.classList.remove('active');
+      });
+
+      option.classList.add('active');
 
       if (option.querySelector('.blue')) {
         document.body.className = 'theme-blue';
