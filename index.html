@@ -1538,6 +1538,20 @@ body.theme-orange {
   });
 </script>
 
+<script>
+  const selectableTemplates =
+    document.querySelectorAll('.selectable-template');
+
+  selectableTemplates.forEach(template => {
+    template.addEventListener('click', () => {
+      selectableTemplates.forEach(item => {
+        item.classList.remove('active');
+      });
+
+      template.classList.add('active');
+    });
+  });
+</script>
 
 </body>
 </html>
