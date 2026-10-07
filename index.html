@@ -928,6 +928,15 @@ body.theme-orange {
   box-shadow: 0 0 0 5px var(--bg), 0 0 0 7px var(--accent);
 }
     
+    .selected-color {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  opacity: 0.5;
+  transition: color 0.5s ease, opacity 0.5s ease;
+}
+    
   </style>
 </head>
 
@@ -1276,15 +1285,6 @@ body.theme-orange {
       サイト全体の印象を調整します。
     </p>
 
- <div class="color-options">
-  <div class="color-option"><div class="color-dot blue"></div><span>BLUE</span></div>
-  <div class="color-option"><div class="color-dot green"></div><span>GREEN</span></div>
-  <div class="color-option"><div class="color-dot beige"></div><span>BEIGE</span></div>
-  <div class="color-option"><div class="color-dot black"></div><span>BLACK</span></div>
-  <div class="color-option"><div class="color-dot orange"></div><span>ORANGE</span></div>
-</div>
-
-<p class="selected-color">BLUE SELECTED.</p>
 
   <div class="color-option">
     <div class="color-dot blue"></div>
@@ -1310,7 +1310,7 @@ body.theme-orange {
     <div class="color-dot orange"></div>
     <span>ORANGE</span>
   </div>
-
+<p class="selected-color">BLUE SELECTED.</p>
 
   </section>
 
