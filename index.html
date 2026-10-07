@@ -1480,8 +1480,9 @@ body.theme-orange {
     menuButton.classList.toggle('menu-active');
   });
   </script>
-  <script>
+ <script>
   const colorOptions = document.querySelectorAll('.color-option');
+  const selectedColor = document.querySelector('.selected-color');
 
   colorOptions.forEach(option => {
     option.addEventListener('click', () => {
@@ -1494,22 +1495,27 @@ body.theme-orange {
 
       if (option.querySelector('.blue')) {
         document.body.className = 'theme-blue';
+        selectedColor.textContent = 'BLUE SELECTED.';
       }
 
       if (option.querySelector('.green')) {
         document.body.className = 'theme-green';
+        selectedColor.textContent = 'GREEN SELECTED.';
       }
 
       if (option.querySelector('.beige')) {
         document.body.className = 'theme-beige';
+        selectedColor.textContent = 'BEIGE SELECTED.';
       }
 
       if (option.querySelector('.black')) {
         document.body.className = 'theme-black';
+        selectedColor.textContent = 'BLACK SELECTED.';
       }
 
       if (option.querySelector('.orange')) {
         document.body.className = 'theme-orange';
+        selectedColor.textContent = 'ORANGE SELECTED.';
       }
 
     });
