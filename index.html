@@ -299,6 +299,20 @@
       font-size: 11px;
       opacity: 0.5;
     }
+    
+    .selectable-template {
+  cursor: pointer;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.selectable-template:hover {
+  transform: translateY(-6px);
+}
+
+.selectable-template.active {
+  transform: translateY(-8px);
+  opacity: 0.85;
+}
 
 /* =========================
    SERVICE
